@@ -4,14 +4,14 @@ from src.ex3_friendships.friendships import FriendShips
 
 class TestFriendships(unittest.TestCase):
     def setUp(self):
-        database = {
+        initial = {
             "Miotk": ["Kowalski", "Nowak", "Bobkowska"],
             "Kowalski": ["Miotk"],
             "Nowak": ["Miotk"],
             "Bobkowska": ["Miotk"],
             "Test": []
         }
-        self.friendships = FriendShips(database=database)
+        self.friendships = FriendShips(initial=initial)
 
     def test_create_person(self):
         person = "Bing"

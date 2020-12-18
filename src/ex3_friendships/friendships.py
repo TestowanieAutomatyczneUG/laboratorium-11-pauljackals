@@ -1,9 +1,9 @@
 class FriendShips:
-    def __init__(self, database=None):
-        if database is None:
+    def __init__(self, initial=None):
+        if initial is None:
             self.friendships = {}
         else:
-            self.friendships = database
+            self.friendships = initial
 
     def create_person(self, person):
         if type(person) != str:
